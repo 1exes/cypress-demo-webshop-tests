@@ -1,6 +1,6 @@
 describe('Demowebshop Buch kaufen und Menge ändern', () => {
   it('fügt Buch hinzu und ändert Menge im Warenkorb', () => {
-    cy.visit('https://demowebshop.tricentis.com/books');
+    cy.visit('/books');
     cy.contains('Computing and Internet').click();
     cy.get('#add-to-cart-button-13').click();
     cy.get('.cart-label').first().click();

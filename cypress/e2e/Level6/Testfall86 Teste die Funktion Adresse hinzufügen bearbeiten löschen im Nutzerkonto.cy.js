@@ -1,11 +1,11 @@
 describe('Funktion Adresse hinzufügen bearbeiten löschen im Nutzerkonto', () => {
   it('soll Nutzkonto auf die funktion Aresse hinzuügen oder bearbeiten oder löschen testen', () => {
- cy.visit('https://demowebshop.tricentis.com/') 
+ cy.visit('/') 
 
 
     cy.contains('Log in').click();
-    cy.get('#Email').type('Johnii3000@gmail.com');
-    cy.get('#Password').type('Haus1423?!');
+    cy.get('#Email').type(Cypress.env('TEST_EMAIL'));
+    cy.get('#Password').type(Cypress.env('TEST_PASSWORD'));
     cy.get('#RememberMe').click()
     cy.get('input[value="Log in"]').click();
     cy.get('a.account').first().click();

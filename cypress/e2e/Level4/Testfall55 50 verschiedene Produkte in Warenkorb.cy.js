@@ -1,6 +1,6 @@
 describe('Bis zu 50 Produkte in den Warenkorb legen', () => {
   it('fügt Produkte aus verschiedenen Kategorien hinzu', () => {
-    cy.visit('https://demowebshop.tricentis.com/');
+    cy.visit('/');
 
 
     cy.contains('Books').click();
@@ -16,7 +16,7 @@ describe('Bis zu 50 Produkte in den Warenkorb legen', () => {
     cy.get('#add-to-cart-button-22').click();
 
 
-    cy.visit('https://demowebshop.tricentis.com/desktops')
+    cy.visit('/desktops')
     cy.contains('Build your own cheap computer').click()
     cy.get('#add-to-cart-button-72').click()   
     cy.go('back')
@@ -37,12 +37,12 @@ describe('Bis zu 50 Produkte in den Warenkorb legen', () => {
     cy.contains('Build your own expensive computer').click()
     cy.get('#add-to-cart-button-74').click()
 
-    cy.visit('https://demowebshop.tricentis.com/notebooks')
+    cy.visit('/notebooks')
     cy.contains('14.1-inch Laptop').click();
     cy.get('#add-to-cart-button-31').click();
     
 
-    cy.visit('https://demowebshop.tricentis.com/accessories')
+    cy.visit('/accessories')
     cy.contains('TCP Instructor Led Training').click()
     cy.get('#add-to-cart-button-66').first().click()
     cy.go('back')
@@ -76,7 +76,7 @@ describe('Bis zu 50 Produkte in den Warenkorb legen', () => {
     cy.go('back')
 
 
-    cy.visit('https://demowebshop.tricentis.com/cell-phones')
+    cy.visit('/cell-phones')
     cy.contains('Smartphone').click()
     cy.get('#add-to-cart-button-43').click
     cy.go('back')
@@ -84,7 +84,7 @@ describe('Bis zu 50 Produkte in den Warenkorb legen', () => {
     cy.get('#add-to-cart-button-80').click()
 
 
-    cy.visit('https://demowebshop.tricentis.com/apparel-shoes')
+    cy.visit('/apparel-shoes')
     
     cy.contains("50's Rockabilly Polka Dot Top JR Plus Size").click();
     cy.get('#add-to-cart-button-5').click();
@@ -103,7 +103,7 @@ describe('Bis zu 50 Produkte in den Warenkorb legen', () => {
     cy.go('back')
   
    
-    cy.visit('https://demowebshop.tricentis.com/apparel-shoes?pagenumber=2')
+    cy.visit('/apparel-shoes?pagenumber=2')
     cy.contains("Men's Wrinkle Free Long Sleeve").click()
     cy.get('#add-to-cart-button-10').click()
     cy.go('back')
@@ -113,22 +113,22 @@ describe('Bis zu 50 Produkte in den Warenkorb legen', () => {
     cy.get('#add-to-cart-button-81').click()
     
 
-    cy.visit('https://demowebshop.tricentis.com/digital-downloads')
+    cy.visit('/digital-downloads')
     cy.contains('Digital downloads').click();
     cy.contains("3rd Album").click();
     cy.get('#add-to-cart-button-53').click();
     cy.go('back')
 
     
-    cy.visit('https://demowebshop.tricentis.com/music-album-1');
+    cy.visit('/music-album-1');
     cy.get('[id^="add-to-cart-button"]').click();
     
 
-    cy.visit('https://demowebshop.tricentis.com/music-2');
+    cy.visit('/music-2');
     cy.get('[id^="add-to-cart-button"]').click();
 
 
-    cy.visit('https://demowebshop.tricentis.com/jewelry')
+    cy.visit('/jewelry')
     cy.contains('Create Your Own Jewelry').click()
     cy.get('#product_attribute_71_10_16').type('20')
     cy.get('#add-to-cart-button-71').click()
@@ -138,7 +138,7 @@ describe('Bis zu 50 Produkte in den Warenkorb legen', () => {
     cy.get('#add-to-cart-button-14').click()
 
 
-    cy.visit('https://demowebshop.tricentis.com/gift-cards')
+    cy.visit('/gift-cards')
     cy.contains('$5 Virtual Gift Card').click()
     cy.get('#giftcard_1_RecipientName').type('Tom');
     cy.get('#giftcard_1_RecipientEmail').type('Tom.tom@gmail.com');

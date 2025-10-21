@@ -1,0 +1,37 @@
+{
+  "validAddress": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "Johnii3000@gmail.com",
+    "company": "Test Company GmbH",
+    "country": "Germany",
+    "city": "Berlin",
+    "address1": "Hauptstraße 123",
+    "address2": "",
+    "zip": "10115",
+    "phone": "+491234567890"
+  },
+  "alternativeAddress": {
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "jane.smith@example.com",
+    "company": "Alternative Corp",
+    "country": "United States",
+    "city": "New York",
+    "address1": "5th Avenue 456",
+    "address2": "Apt 789",
+    "zip": "10001",
+    "phone": "+12125551234"
+  },
+  "invalidAddress": {
+    "firstName": "",
+    "lastName": "",
+    "email": "invalid-email",
+    "company": "",
+    "country": "",
+    "city": "",
+    "address1": "",
+    "zip": "abc",
+    "phone": "invalid"
+  }
+}

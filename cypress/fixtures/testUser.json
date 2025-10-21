@@ -1,0 +1,20 @@
+{
+  "validUser": {
+    "email": "Johnii3000@gmail.com",
+    "password": "1234567",
+    "firstName": "John",
+    "lastName": "Doe",
+    "gender": "M"
+  },
+  "newUser": {
+    "email": "newuser@example.com",
+    "password": "SecurePass123!",
+    "firstName": "Test",
+    "lastName": "User",
+    "gender": "F"
+  },
+  "invalidUser": {
+    "email": "invalid@email.com",
+    "password": "wrongpassword"
+  }
+}

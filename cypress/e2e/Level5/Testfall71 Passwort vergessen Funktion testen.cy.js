@@ -2,7 +2,7 @@ describe('Forgot PAssword link testen  ', () => {
   it('es soll den Link Forgot Password aufrufen', () => {
   
 
-cy.visit('https://demowebshop.tricentis.com/') 
+cy.visit('/') 
 
 cy.get('.ico-login') 
       .should('be.visible') 

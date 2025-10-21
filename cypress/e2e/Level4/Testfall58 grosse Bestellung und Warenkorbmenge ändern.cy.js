@@ -5,7 +5,7 @@
 
 describe('grosse Bestellung und Warenkorbmenge ändern', () => {
   it('es soll Produkte in den Warenkorb hinzufügen und dann die Mege im Warenkorb ändern', () => {
-    cy.visit('https://demowebshop.tricentis.com/')
+    cy.visit('/')
     cy.contains('Books').click();
     cy.contains('Computing and Internet').first().click()
     cy.get('#addtocart_13_EnteredQuantity').clear().type(100)

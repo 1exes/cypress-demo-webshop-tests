@@ -2,7 +2,7 @@ describe(' Suche mit Sonderzeichen', () => {
   it('', () => {
 
 
-cy.visit('https://demowebshop.tricentis.com');
+cy.visit('');
 cy.get('input[name="q"]').type('@#$%&');
   
 

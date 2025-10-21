@@ -1,21 +1,21 @@
 describe('verschiedene Versandoptionen', () => {
   it('soll verschiedene Versandoptionen checken', () => {
-    cy.visit('https://demowebshop.tricentis.com/') 
+    cy.visit('/') 
 
 
  cy.contains('Log in').click();
-    cy.get('#Email').type('Johnii3000@gmail.com');
-    cy.get('#Password').type('Haus1423?!');
+    cy.get('#Email').type(Cypress.env('TEST_EMAIL'));
+    cy.get('#Password').type(Cypress.env('TEST_PASSWORD'));
     cy.get('#RememberMe').click()
     cy.get('input[value="Log in"]').click();
 cy.contains('Books').click();
-cy.visit('https://demowebshop.tricentis.com/fiction')
+cy.visit('/fiction')
 cy.get('#add-to-cart-button-45').click()
 cy.contains('Computers').click()
-cy.visit('https://demowebshop.tricentis.com/notebooks')
-cy.visit('https://demowebshop.tricentis.com/141-inch-laptop')
+cy.visit('/notebooks')
+cy.visit('/141-inch-laptop')
 cy.get('#add-to-cart-button-31').first().click()
-cy.visit('https://demowebshop.tricentis.com/create-it-yourself-jewelry')
+cy.visit('/create-it-yourself-jewelry')
 cy.get('#product_attribute_71_10_16').type('4')
 cy.get('#add-to-cart-button-71').click();
 cy.get('.cart-label').first().click()

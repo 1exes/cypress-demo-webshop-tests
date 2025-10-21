@@ -2,10 +2,10 @@ describe('nach Log Out wieder einloggen', () => {
   it('soll nach Log Out wieder einloggen und vorher geschützte seiten aufrufen   ', () => {
 
 
-cy.visit('https://demowebshop.tricentis.com/') 
+cy.visit('/') 
 cy.contains('Log in').click();
-    cy.get('#Email').type('Johnii3000@gmail.com');
-    cy.get('#Password').type('Haus1423?!');
+    cy.get('#Email').type(Cypress.env('TEST_EMAIL'));
+    cy.get('#Password').type(Cypress.env('TEST_PASSWORD'));
     cy.get('#RememberMe').click()
     cy.get('input[value="Log in"]').click();
 
@@ -19,8 +19,8 @@ cy.get('.ico-logout')
 
 
 cy.contains('Log in').click();
-    cy.get('#Email').type('Johnii3000@gmail.com');
-    cy.get('#Password').type('Haus1423?!');
+    cy.get('#Email').type(Cypress.env('TEST_EMAIL'));
+    cy.get('#Password').type(Cypress.env('TEST_PASSWORD'));
     cy.get('#RememberMe').click()
     cy.get('input[value="Log in"]').click();
 
