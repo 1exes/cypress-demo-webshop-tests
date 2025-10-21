@@ -1,0 +1,44 @@
+{
+  "categories": {
+    "books": {
+      "name": "Books",
+      "url": "/books",
+      "products": [
+        "Computing and Internet",
+        "Fiction",
+        "Health Book"
+      ]
+    },
+    "computers": {
+      "name": "Computers",
+      "url": "/computers",
+      "subcategories": ["Desktops", "Notebooks", "Accessories"]
+    },
+    "electronics": {
+      "name": "Electronics",
+      "url": "/electronics",
+      "subcategories": ["Camera, photo", "Cell phones"]
+    },
+    "apparelShoes": {
+      "name": "Apparel & Shoes",
+      "url": "/apparel-shoes"
+    },
+    "digitalDownloads": {
+      "name": "Digital downloads",
+      "url": "/digital-downloads"
+    },
+    "jewelry": {
+      "name": "Jewelry",
+      "url": "/jewelry"
+    },
+    "giftCards": {
+      "name": "Gift Cards",
+      "url": "/gift-cards"
+    }
+  },
+  "searchTerms": {
+    "valid": ["laptop", "book", "computer", "phone"],
+    "invalid": ["xyz123nonexistent", "!@#$%^&*"],
+    "special": ["<script>", "'; DROP TABLE--", "über"]
+  }
+}

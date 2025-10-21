@@ -2,17 +2,17 @@
 describe('Ändere das Passwort im Benutzerkonto', () => {
   it('soll das Passwort im Benutzerkonto ändern ', () => {
 
-cy.visit('https://demowebshop.tricentis.com/') 
+cy.visit('/') 
 cy.contains('Log in').click();
-    cy.get('#Email').type('Johnii3000@gmail.com');
-    cy.get('#Password').type('Haus1423?!');
+    cy.get('#Email').type(Cypress.env('TEST_EMAIL'));
+    cy.get('#Password').type(Cypress.env('TEST_PASSWORD'));
     cy.get('#RememberMe').click()
     cy.get('input[value="Log in"]').click();
     cy.get('a.account').first().click();
     cy.contains('a.inactive', 'Change password').click();
-    cy.get('#OldPassword').type('Haus1423?!')
-    cy.get('#NewPassword').type('Haus1423?!')
-    cy.get('#ConfirmNewPassword').type('Haus1423?!')
+    cy.get('#OldPassword').type(Cypress.env('TEST_PASSWORD'))
+    cy.get('#NewPassword').type(Cypress.env('TEST_PASSWORD'))
+    cy.get('#ConfirmNewPassword').type(Cypress.env('TEST_PASSWORD'))
     cy.get('.button-1.change-password-button').click()
 
 

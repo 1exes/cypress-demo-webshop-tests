@@ -2,7 +2,7 @@ describe('Registrieruung mit ungültiger E Mail ', () => {
   it('es soll sich registriert werden mit ungültiger E Mail', () => {
   
 
-cy.visit('https://demowebshop.tricentis.com/') 
+cy.visit('/') 
 
     cy.get('.ico-register') 
       .should('be.visible') 

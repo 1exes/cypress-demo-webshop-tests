@@ -1,6 +1,6 @@
 describe('Footer Links prüfen', () => {
   it('Footerlinks sollen erreichbar sein', () => {
-    cy.visit('https://demowebshop.tricentis.com');
+    cy.visit('');
     cy.get('.footer a').each(($link) => {
       const url = $link.prop('href');
       if (url && !url.startsWith('javascript')) {

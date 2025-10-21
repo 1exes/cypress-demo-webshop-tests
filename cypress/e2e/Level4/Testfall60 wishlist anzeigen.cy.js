@@ -1,6 +1,6 @@
 describe('wishlist anzeigen', () => {
   it('es soll die wunschliste angezeigt werden', () => {
-    cy.visit('https://demowebshop.tricentis.com/');
+    cy.visit('/');
     cy.get('span.cart-label').contains('Wishlist').click();
   });
 });

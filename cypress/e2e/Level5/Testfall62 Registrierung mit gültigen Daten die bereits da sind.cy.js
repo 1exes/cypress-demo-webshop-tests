@@ -2,7 +2,7 @@ describe('Registrieruung mit gültigen Daten die vorhanden sind  ', () => {
   it('es soll sich registriert werden mit gültigen Daten die bererits vorhanden sind ', () => {
   
 
-cy.visit('https://demowebshop.tricentis.com/') 
+cy.visit('/') 
 
     cy.get('.ico-register') 
       .should('be.visible') 

@@ -5,7 +5,7 @@ describe('Demo-Webshop Startseite', () => {
 
 
 
-    cy.visit('https://demowebshop.tricentis.com/');
+    cy.visit('/');
     cy.contains('Demo Web Shop');
 
 

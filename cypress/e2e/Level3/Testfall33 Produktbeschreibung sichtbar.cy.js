@@ -1,7 +1,7 @@
 
 describe('Produktbeschreibung testen', () => {
 it('prüft Produktbeschreibungen', () => {
-  cy.visit('https://demowebshop.tricentis.com/books');
+  cy.visit('/books');
   cy.get('.product-item h2 a').then(links => {
     [...links].forEach(link => {
       cy.visit(link.href);

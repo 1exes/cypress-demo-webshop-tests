@@ -1,0 +1,38 @@
+{
+  "creditCards": {
+    "visa": {
+      "type": "Visa",
+      "holder": "John Doe",
+      "number": "4111111111111111",
+      "expireMonth": "12",
+      "expireYear": "2025",
+      "cvv": "123"
+    },
+    "mastercard": {
+      "type": "MasterCard",
+      "holder": "Jane Smith",
+      "number": "5555555555554444",
+      "expireMonth": "06",
+      "expireYear": "2026",
+      "cvv": "456"
+    },
+    "invalid": {
+      "type": "Visa",
+      "holder": "",
+      "number": "1234567890123456",
+      "expireMonth": "01",
+      "expireYear": "2020",
+      "cvv": "999"
+    }
+  },
+  "shippingMethods": {
+    "ground": "Ground",
+    "nextDay": "Next Day Air",
+    "secondDay": "2nd Day Air"
+  },
+  "paymentMethods": {
+    "creditCard": "CreditCard",
+    "cashOnDelivery": "COD",
+    "purchaseOrder": "PurchaseOrder"
+  }
+}

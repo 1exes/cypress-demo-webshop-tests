@@ -1,14 +1,14 @@
 describe('Bestellung ohne Produkte im Warenkorb', () => {
   it('soll eine Bestellung ausführen ohne das Produkte in den Warenkorb gelegt werden ', () => {
-    cy.visit('https://demowebshop.tricentis.com/') 
+    cy.visit('/') 
 
 
  cy.contains('Log in').click();
-    cy.get('#Email').type('Johnii3000@gmail.com');
-    cy.get('#Password').type('Haus1423?!');
+    cy.get('#Email').type(Cypress.env('TEST_EMAIL'));
+    cy.get('#Password').type(Cypress.env('TEST_PASSWORD'));
     cy.get('#RememberMe').click()
     cy.get('input[value="Log in"]').click();
-cy.visit('https://demowebshop.tricentis.com/create-it-yourself-jewelry')
+cy.visit('/create-it-yourself-jewelry')
 cy.get('#product_attribute_71_10_16').type('4')
 cy.get('#add-to-cart-button-71').click();
 cy.get('.cart-label').first().click()

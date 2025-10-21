@@ -2,7 +2,7 @@ describe('Registrieruung ohne Pflichtfelder ', () => {
   it('es soll sich registriert werden ohne Pflichtfelder', () => {
   
 
-cy.visit('https://demowebshop.tricentis.com/') 
+cy.visit('/') 
 
     cy.get('.ico-register') 
       .should('be.visible') 

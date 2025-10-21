@@ -1,16 +1,16 @@
 describe('Bestellung als Gast', () => {
   it('es soll als Gast was bestellen', () => {
-    cy.visit('https://demowebshop.tricentis.com/') 
+    cy.visit('/') 
 
 
 cy.contains('Books').click();
-cy.visit('https://demowebshop.tricentis.com/fiction')
+cy.visit('/fiction')
 cy.get('#add-to-cart-button-45').click()
 cy.contains('Computers').click()
-cy.visit('https://demowebshop.tricentis.com/notebooks')
-cy.visit('https://demowebshop.tricentis.com/141-inch-laptop')
+cy.visit('/notebooks')
+cy.visit('/141-inch-laptop')
 cy.get('#add-to-cart-button-31').first().click()
-cy.visit('https://demowebshop.tricentis.com/create-it-yourself-jewelry')
+cy.visit('/create-it-yourself-jewelry')
 cy.get('#product_attribute_71_10_16').type('4')
 cy.get('#add-to-cart-button-71').click();
 cy.get('.cart-label').first().click()

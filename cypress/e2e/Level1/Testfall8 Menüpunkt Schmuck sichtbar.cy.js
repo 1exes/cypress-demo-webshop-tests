@@ -2,7 +2,7 @@ describe('Toolbar  Jewelry prüfen', () => {
   it('sollte Menüpunkt Jewelry prüfen ob sichtbar', () => {
 
 
-cy.visit("https://demowebshop.tricentis.com/")
+cy.visit("' + Cypress.config('baseUrl') + '/")
 cy.contains("Jewelry").should("be.visible");
 
     

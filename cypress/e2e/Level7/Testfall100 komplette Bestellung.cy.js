@@ -1,7 +1,7 @@
 describe('komplette Bestellung  ', () => {
   it('soll eine Bestellung ausführen mit User anlegen einloggen auf Historie zugreifen können  ', () => {
 
-cy.visit('https://demowebshop.tricentis.com/')
+cy.visit('/')
 //cy.get('.ico-register') 
   //    .should('be.visible') 
     //  .click()
@@ -38,23 +38,23 @@ cy.contains('Books').click();
 
 
 
-     cy.visit('https://demowebshop.tricentis.com/desktops')
+     cy.visit('/desktops')
     cy.contains('Build your own cheap computer').first().click({ force: true });
     cy.get('#add-to-cart-button-72').click()   
     cy.go('back')
 
 
-     cy.visit('https://demowebshop.tricentis.com/notebooks')
+     cy.visit('/notebooks')
     cy.contains('14.1-inch Laptop').first().click({ force: true });
     cy.get('#add-to-cart-button-31').click();
 
-    cy.visit('https://demowebshop.tricentis.com/accessories')
+    cy.visit('/accessories')
     cy.contains('TCP Instructor Led Training').first().click({ force: true });
     cy.get('#add-to-cart-button-66').first().click()
     cy.go('back')
 
 
-     cy.visit('https://demowebshop.tricentis.com/cell-phones')
+     cy.visit('/cell-phones')
     cy.contains('Smartphone').first().click({ force: true });
     cy.get('#add-to-cart-button-43').click
     cy.go('back')
@@ -63,7 +63,7 @@ cy.contains('Books').click();
     cy.get('#add-to-cart-button-80').click()
 
 
-cy.visit('https://demowebshop.tricentis.com/apparel-shoes')
+cy.visit('/apparel-shoes')
       cy.contains("Casual Golf Belt").first().click({ force: true });
       cy.get('#addtocart_40_EnteredQuantity').type('5')
     cy.get('#add-to-cart-button-40').click();
@@ -71,7 +71,7 @@ cy.visit('https://demowebshop.tricentis.com/apparel-shoes')
 
 
 
-     cy.visit('https://demowebshop.tricentis.com/jewelry')
+     cy.visit('/jewelry')
     cy.contains('Create Your Own Jewelry').first().click({ force: true });
     cy.get('#product_attribute_71_10_16').type('20')
     cy.get('#add-to-cart-button-71').click()
@@ -146,9 +146,9 @@ cy.visit('https://demowebshop.tricentis.com/apparel-shoes')
 
 //c)
 
-// Name:3rd Album / Preis:1.00  / Kategorie: Digital Downloads  / Bild: https://demowebshop.tricentis.com/content/images/thumbs/0000235_3rd-album_300.png
-// Name:50's Rockabilly Polka Dot Top JR Plus Size/ Preis:11.00 / Kategorie: Apparel & Shoes/ Bild:https://demowebshop.tricentis.com/content/images/thumbs/0000018_50s-rockabilly-polka-dot-top-jr-plus-size_300.jpg
-// Name:Health Book/ Preis:10.00 / Kategorie: Books/ Bild:https://demowebshop.tricentis.com/content/images/thumbs/0000131_health-book_300.jpeg
+// Name:3rd Album / Preis:1.00  / Kategorie: Digital Downloads  / Bild: ' + Cypress.config('baseUrl') + '/content/images/thumbs/0000235_3rd-album_300.png
+// Name:50's Rockabilly Polka Dot Top JR Plus Size/ Preis:11.00 / Kategorie: Apparel & Shoes/ Bild:' + Cypress.config('baseUrl') + '/content/images/thumbs/0000018_50s-rockabilly-polka-dot-top-jr-plus-size_300.jpg
+// Name:Health Book/ Preis:10.00 / Kategorie: Books/ Bild:' + Cypress.config('baseUrl') + '/content/images/thumbs/0000131_health-book_300.jpeg
 
 
 //Sind alle Suchergebnisse relevant? - Ja 

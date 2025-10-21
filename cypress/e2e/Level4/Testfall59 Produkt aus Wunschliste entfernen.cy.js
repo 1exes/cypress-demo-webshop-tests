@@ -1,7 +1,7 @@
 describe('Produkt aus wunschliste entfernen', () => {
   it('es soll ein Produkt aus der Wunschliste enfernt werden', () => {
 
-cy.visit('https://demowebshop.tricentis.com/');
+cy.visit('/');
 cy.contains('Books').click()
 cy.contains('Fiction EX').click()
 cy.get('#add-to-wishlist-button-78').click()

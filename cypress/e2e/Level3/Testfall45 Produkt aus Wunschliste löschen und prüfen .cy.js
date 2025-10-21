@@ -2,7 +2,7 @@ describe('Wunschliste - Produkt entfernen', () => {
   const email = 'deine@email.de'; 
   const password = 'deinPasswort'; 
   it('Entfernt ein Produkt aus der Wunschliste', () => {
-  cy.visit('https://demowebshop.tricentis.com/');
+  cy.visit('/');
   cy.get('.header-links a[href="/login"]').click();
   cy.get('#Email').type(email);
   cy.get('#Password').type(password);

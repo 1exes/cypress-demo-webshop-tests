@@ -3,7 +3,7 @@ describe('Sprache umstellen ', () => {
 
 
 
-cy.visit('https://demowebshop.tricentis.com');
+cy.visit('');
 cy.get('Language').click();
 
 

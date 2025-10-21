@@ -1,20 +1,15 @@
-describe('Log Out ', () => {
-  it('es soll sich erfolgreich ausloggen', () => {
-  
+describe('Log Out Funktion testen', () => {
+  it('sollte sich erfolgreich ausloggen', () => {
+    // Login first using custom command
+    cy.login();
 
-cy.visit('https://demowebshop.tricentis.com/') 
+    // Verify logged in
+    cy.shouldBeLoggedIn();
 
-cy.get('.ico-login') 
-      .should('be.visible') 
-      .click()  
-cy.get('#Email').type('Johnii3000@gmail.com') 
-cy.get('#Password').type('Haus1423?!')
-cy.get('#RememberMe').click()
-cy.get('.button-1.login-button').should('be.visible').click();
-cy.get('.ico-logout') 
-      .should('be.visible') 
-      .click()
+    // Logout using custom command
+    cy.logout();
 
-
-  })
-})
+    // Verify logged out
+    cy.shouldBeLoggedOut();
+  });
+});
